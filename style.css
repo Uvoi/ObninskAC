@@ -1,20 +1,25 @@
-body *{
+body, *{
 	margin: 0;
 	padding: 0;
 	/* border: 1px solid red; */
 	font-family: sans-serif;
 }
 
-body
+.bal
 {
-	margin: 0px;
-	padding: 0px;
+	
+}
+
+span, p{
+	font-size: 3.5vmax;
 }
 
 .title
 {
 	font-size: 30px;
 	padding-bottom: 5%;
+	font-weight: bold;
+	font-size: 5vmax;
 }
 
 .map {
@@ -28,7 +33,7 @@ body
 }
 
 [class*="balloon__layout"] {
-	height: 70vh !important;
+	height: 65vh !important;
 	width: 23vw !important;
 	padding: 0px !important;
 	border-radius: 2vh;
@@ -52,6 +57,8 @@ body
 {
 	position: relative;
 	width: 100% !important;
+	max-height: 45vmax;
+
 }
 
 .info
@@ -62,26 +69,70 @@ body
 	padding: 3% 6%;
 	background-color: white;
 	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	
 }
 
 .infoLink
 {
 	text-decoration: none;
-	background-color: #c0cbe9;
-	color: rgb(22, 36, 231);
+	background-color: #e1e9ff;
+	color: rgb(0, 81, 255);
 	font-weight: bold;
-	padding: 1% 4%;
+	padding: 0.5% 3%;
 	border-radius: 2vh;
-	font-size: 24px;
+}
+
+.infoLink :first-child
+{
+	font-size: 5vmax;
+}
+
+.infoLink:hover 
+{
+	background-color: rgb(62, 122, 253);
+	transition: all 0.5s ease-in-out;
+}
+
+.infoLink:hover span
+{
+	transition: all 0.5s ease-in-out;
+	filter:brightness(100);
 }
 
 .adr_lnk
 {
 	display: flex;
 	justify-content: space-between;
+	padding-top: 19vmax;
+	align-items: center;
 }
 
 .adr
 {
-	font-size: 24px;
+	font-size: 0.9em;
+	color: #333;
+}
+
+.status_cost
+{
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 5%;
+}
+
+.fontBigger
+{
+	font-size: 1.1em;
+}
+
+.cost
+{
+	font-weight: bold;
+}
+
+.finishing
+{
+	margin-bottom: 1vh;
 }
