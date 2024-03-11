@@ -7,7 +7,11 @@ body, *{
 
 .bal
 {
-	
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	/* align-items: end; */
 }
 
 span, p{
@@ -91,7 +95,7 @@ span, p{
 
 .infoLink:hover 
 {
-	background-color: rgb(62, 122, 253);
+	background-color: 3rgb(62, 122, 253);
 	transition: all 0.5s ease-in-out;
 }
 
@@ -105,13 +109,14 @@ span, p{
 {
 	display: flex;
 	justify-content: space-between;
-	padding-top: 19vmax;
+	/* padding-top: 19vmax; */
 	align-items: center;
+	padding: 3% 6%;
 }
 
 .adr
 {
-	font-size: 0.9em;
+	font-size: 3vmax;
 	color: #333;
 }
 
@@ -124,7 +129,7 @@ span, p{
 
 .fontBigger
 {
-	font-size: 1.1em;
+	/* font-size: 1.1em; */
 }
 
 .cost
@@ -136,3 +141,35 @@ span, p{
 {
 	margin-bottom: 1vh;
 }
+
+
+@media (min-width: 250px) and (max-width: 500px) {
+
+	[class*="balloon__layout"] {
+		height: 35vh !important;
+		width: 55vw !important;
+		padding: 0px !important;
+		border-radius: 2vh;
+	}
+
+	span, p{
+		/* font-size: 4vmax !important; */
+	}
+
+}
+
+@media (min-width: 500px) and (max-width: 1000px) {
+
+	[class*="balloon__layout"] {
+		height: 35vh !important;
+		width: 50vw !important;
+		padding: 0px !important;
+		border-radius: 2vh;
+	}
+
+	span, p{
+		font-size: 3.5vmax;
+	}
+}
+
+
