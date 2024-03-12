@@ -127,11 +127,6 @@ span, p{
 	padding-bottom: 5%;
 }
 
-.fontBigger
-{
-	/* font-size: 1.1em; */
-}
-
 .cost
 {
 	font-weight: bold;
@@ -152,24 +147,34 @@ span, p{
 		border-radius: 2vh;
 	}
 
-	span, p{
-		/* font-size: 4vmax !important; */
-	}
-
 }
 
 @media (min-width: 500px) and (max-width: 1000px) {
 
 	[class*="balloon__layout"] {
-		height: 35vh !important;
+		height: auto !important;
 		width: 50vw !important;
 		padding: 0px !important;
-		border-radius: 2vh;
 	}
 
-	span, p{
-		font-size: 3.5vmax;
-	}
 }
 
+@media (min-width: 600px) and (orientation: landscape) {
+
+	[class*="balloon__layout"] {
+		height: 70vh !important;
+		width: 30vw !important;
+		padding: 0px !important;
+	}
+
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+
+	[class*="balloon__layout"] {
+		height: 70vh !important;
+		width: 45vw !important;
+		padding: 0px !important;
+	}
+}
 
