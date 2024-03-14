@@ -13,11 +13,10 @@ let balloons = [[`<iframe src="kosmos20.html"/>`], [`<iframe src="green_iland.ht
 function init() {
 	let map = new ymaps.Map('map', {
 		center: center,
-		zoom: 15
-	});
-
-
-
+		zoom: 14,
+	},{
+    restrictMapArea: [[55.164176, 36.515988], [55.080189, 36.684949]]
+  });
 
 	map.controls.remove('geolocationControl'); // удаляем геолокацию
   map.controls.remove('searchControl'); // удаляем поиск
@@ -44,13 +43,6 @@ function init() {
   
   map.geoObjects.add(clusterer);
   clusterer.add(placemarks);
-
-
-
-
-
-
-
 }
 
 ymaps.ready(init);
